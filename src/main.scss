@@ -1,0 +1,57 @@
+.klint-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    height: 100%;
+    img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+}
+
+.window{
+    width: 475px;
+    height: 645px;
+    min-width: 300px;
+    min-height: 200px;
+    position: absolute;
+    .resizer{
+        position: absolute;
+        z-index: 1;
+        width: 14px;
+        height: 14px;
+        background: gold;
+        &.corner{
+            z-index: 2;
+            background: darkgoldenrod;
+            &.tl{ cursor: nw-resize; top: -5px; left: -5px; }
+            &.tr{ cursor: ne-resize; top: -5px; right: -5px; }
+            &.bl{ cursor: sw-resize; bottom: -5px; left: -5px; }
+            &.br{ cursor: se-resize; bottom: -5px; right: -5px; }
+        }
+        &.t, &.b{
+            width: 100%;
+            height: 14px;
+        }
+        &.l, &.r{
+            width: 14px;
+            height: 100%;
+        }
+        &.t{ cursor: n-resize; top: -5px; }
+        &.b{ cursor: s-resize; bottom: -5px; }
+        &.l{ cursor: w-resize; left: -5px; }
+        &.r{ cursor: e-resize; right: -5px; }
+    }
+  
+    .body{
+        overflow: hidden;
+        height: 100%;
+        background: #809eb6;
+        .cover{
+            width: 100%;
+            height: 100%;
+            z-index: 40;
+            position: absolute;
+        }
+    }
+}
