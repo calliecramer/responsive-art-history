@@ -4,17 +4,36 @@ const xwindow = document.querySelector(".window");
 
 window.addEventListener("load", onLoad);
 function onLoad(e){
+  // position in center of screen
   const rect = xwindow.getBoundingClientRect()
-  
   xwindow.style.left = rect.left + (window.innerWidth/2-rect.width/2) + "px"
   xwindow.style.top = rect.top + (window.innerHeight/2-rect.height/2)  + "px"
+
   onResize();
   window.addEventListener("resize", onResize);
 }
 
 function onResize (e){
+  // size painting within screen bounds
   xwindow.style.maxWidth=window.innerWidth;
   xwindow.style.maxHeight=window.innerHeight;
+  runQueries();
+}
+
+// "media queries"
+function runQueries() {
+  if (xwindow.offsetWidth < 250) {
+    xwindow.classList.remove("medium");
+    xwindow.classList.remove("large");
+  }
+  if (xwindow.offsetWidth > 250) {
+    xwindow.classList.add("medium");
+    xwindow.classList.remove("large");
+  }
+  if (xwindow.offsetWidth > 650) {
+    xwindow.classList.add("large");
+    xwindow.classList.remove("medium");
+  }
 }
 
 const cover = document.querySelector(".cover")
@@ -88,6 +107,7 @@ for (let resizer of resizers){
       }
       prevX = e.clientX
       prevY = e.clientY
+      runQueries()
     }
     function mouseup(){
       window.removeEventListener("mousemove", mousemove)
