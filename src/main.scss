@@ -1,15 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
 body {
     margin: 0;
-    background: #ecebe3;
     box-sizing: border-box;
     overflow-y: hidden;
+    background: #ecebe3;
+    scroll-behavior: smooth;
+    font-family: 'Nanum Gothic', sans-serif;
 }
 .scroll-container {
     scroll-snap-type: x mandatory;
     display: flex;
     overflow-x: scroll;
 }
-
 .scroll {
     min-width: 100vw;
     height: 100vh;
@@ -17,17 +20,43 @@ body {
     position: relative;
 }
 .scroll-1 {
-    background-color: red;
+    background-color: black;
+    color: white;
+    .preview {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 3em;
+        h1 {
+            font-size: 4em;
+        }
+        p {
+            font-size: 1em;
+        }
+        h3 {
+            font-size: 2em;
+        }
+        .go {
+            a {
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
 }
-.scroll-2 {
-    background-color: green;
+
+.top-light {
+    position: absolute;
+    opacity: 30%;
+    user-select: none;
 }
-.scroll-3 {
-    background-color: blue;
+
+.bottom-light {
+    position: absolute;
+    user-select: none;
+    z-index: -1;
 }
-.window{
-    width: 475px;
-    height: 645px;
+
+.painting{
     min-width: 200px;
     min-height: 200px;
     position: absolute;
@@ -74,16 +103,25 @@ body {
     .body{
         overflow: hidden;
         height: 100%;
-        background: #809eb6;
         .cover{
             width: 100%;
             height: 100%;
             z-index: 5;
             position: absolute;
-            background-image: url("../SVGs/paint.png");
             background-size: cover;
             mix-blend-mode: multiply;
             opacity: 50%;
+        }
+    }
+}
+
+.klint {
+    width: 475px;
+    height: 645px;
+    .body {
+        background: #809eb6;
+        .cover {
+            background-image: url("../SVGs/paint.png");
         }
         .klint-grid {
             display: grid;
@@ -229,16 +267,4 @@ body {
         position: absolute; bottom: 0; right: 0; max-height: 250px;
         user-select: none;
     }
-}
-
-.top-light {
-    position: absolute;
-    opacity: 30%;
-    user-select: none;
-}
-
-.bottom-light {
-    position: absolute;
-    z-index: -1;
-    user-select: none;
 }

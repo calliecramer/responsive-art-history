@@ -5,9 +5,21 @@
   </head>
   <body>
     <div class="scroll-container">
-      <div class="scroll scroll-1"></div>
-      <div class="scroll scroll-2 gallery">
-        <div class="window paint1">
+      <div class="scroll scroll-1">
+        <div class="preview">
+          <div class="animation"></div>
+          <div>
+            <h1>Responsive Art Gallery</h1>
+            <p>Imagining what various paintings would look like at mobile/tablet/desktop width. Inspired by Jen Simmons’ responsive Baohaus poster experiments. Built using CSS grid.</p>
+            <h3>Resize paintings by dragging their frames.</h3>
+            <div class="go">
+              <a href="#scroll-2"><p>Go ></p></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll scroll-2 gallery" id="scroll-2">
+        <div class="painting klint">
           <div class="resizer corner tl"></div>
           <div class="resizer corner tr"></div>
           <div class="resizer corner bl"></div>
@@ -17,7 +29,7 @@
           <div class="resizer l"></div>
           <div class="resizer r"></div>
           <div class="body">
-            <div class="klint-container painting-container">
+            <div class="klint-container">
               <div class="cover">
               </div>
               <div class="orange-orb-base">
@@ -67,8 +79,8 @@
         <img class="top-light" src="../SVGs/light.svg"/>
         <img class="bottom-light"src="../SVGs/light.svg"/>
       </div>
-      <div class="scroll scroll-3 gallery">
-        <div class="window paint2">
+      <div class="scroll scroll-3 gallery" id="scroll-3">
+        <div class="painting paint2">
           <div class="resizer corner tl"></div>
           <div class="resizer corner tr"></div>
           <div class="resizer corner bl"></div>

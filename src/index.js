@@ -29,87 +29,87 @@ function runQueries(painting) {
 }
 
 for (let gallery of galleries){
-  const p = gallery.querySelector(".window");
-  window.addEventListener("load", onLoad (p));
+  const painting = gallery.querySelector(".painting");
+  window.addEventListener("load", onLoad (painting));
 
-  const cover = p.querySelector(".cover");
+  const cover = painting.querySelector(".cover");
   cover.addEventListener("mousedown", mousedown);
   
   function mousedown(e){
-    window.addEventListener("mousemove", mousemove)
-    window.addEventListener("mouseup", mouseup)
-    let prevX = e.clientX
-    let prevY = e.clientY
+    window.addEventListener("mousemove", mousemove);
+    window.addEventListener("mouseup", mouseup);
+    let prevX = e.clientX;
+    let prevY = e.clientY;
     function mousemove(e){
-      let newX = e.clientX - prevX
-      let newY = e.clientY - prevY
-      const rect = p.getBoundingClientRect()
-      p.style.left = rect.left + newX + "px"
-      p.style.top = rect.top + newY + "px"
-      prevX = e.clientX
-      prevY = e.clientY
+      let newX = e.clientX - prevX;
+      let newY = e.clientY - prevY;
+      const rect = painting.getBoundingClientRect();
+      painting.style.left = rect.left + newX + "px";
+      painting.style.top = rect.top + newY + "px";
+      prevX = e.clientX;
+      prevY = e.clientY;
     }
     function mouseup(){
-      window.removeEventListener("mousemove", mousemove)
-      window.removeEventListener("mouseup", mouseup)
+      window.removeEventListener("mousemove", mousemove);
+      window.removeEventListener("mouseup", mouseup);
     }
   }
   
-  const resizers = gallery.querySelectorAll(".resizer")
+  const resizers = gallery.querySelectorAll(".resizer");
   
   for (let resizer of resizers){
-    resizer.addEventListener("mousedown", mousedown)
+    resizer.addEventListener("mousedown", mousedown);
     
     function mousedown(e){
-      let currentResizer = e.target
-      let prevX = e.clientX
-      let prevY = e.clientY
-      window.addEventListener("mousemove", mousemove)
-      window.addEventListener("mouseup", mouseup)
+      let currentResizer = e.target;
+      let prevX = e.clientX;
+      let prevY = e.clientY;
+      window.addEventListener("mousemove", mousemove);
+      window.addEventListener("mouseup", mouseup);
 
       function mousemove(e){
-        const rect = p.getBoundingClientRect()
+        const rect = painting.getBoundingClientRect()
         if(currentResizer.classList.contains("br")){
-          p.style.width = rect.width + (e.clientX - prevX) + "px"
-          p.style.height = rect.height + (e.clientY - prevY) + "px"
+          painting.style.width = rect.width + (e.clientX - prevX) + "px";
+          painting.style.height = rect.height + (e.clientY - prevY) + "px";
         }
         else if(currentResizer.classList.contains("bl")){
-          p.style.width = rect.width + (prevX - e.clientX) + "px"
-          p.style.height = rect.height + (e.clientY - prevY) + "px"
-          p.style.left = rect.left + (e.clientX - prevX) + "px"
+          painting.style.width = rect.width + (prevX - e.clientX) + "px";
+          painting.style.height = rect.height + (e.clientY - prevY) + "px";
+          painting.style.left = rect.left + (e.clientX - prevX) + "px";
         }
         else if(currentResizer.classList.contains("tr")){
-          p.style.width = rect.width + (e.clientX - prevX) + "px"
-          p.style.height = rect.height + (prevY - e.clientY) + "px"
-          p.style.top = rect.top + (e.clientY - prevY) + "px"
+          painting.style.width = rect.width + (e.clientX - prevX) + "px";
+          painting.style.height = rect.height + (prevY - e.clientY) + "px";
+          painting.style.top = rect.top + (e.clientY - prevY) + "px";
         }
         else if(currentResizer.classList.contains("tl")){
-          p.style.width = rect.width + (prevX - e.clientX) + "px"
-          p.style.height = rect.height + (prevY - e.clientY) + "px"
-          p.style.top = rect.top + (e.clientY - prevY) + "px"
-          p.style.left = rect.left + (e.clientX - prevX) + "px"
+          painting.style.width = rect.width + (prevX - e.clientX) + "px";
+          painting.style.height = rect.height + (prevY - e.clientY) + "px";
+          painting.style.top = rect.top + (e.clientY - prevY) + "px";
+          painting.style.left = rect.left + (e.clientX - prevX) + "px";
         }
         else if(currentResizer.classList.contains("t")){
-          p.style.height = rect.height + (prevY - e.clientY) + "px"
-          p.style.top = rect.top + (e.clientY - prevY) + "px"
+          painting.style.height = rect.height + (prevY - e.clientY) + "px";
+          painting.style.top = rect.top + (e.clientY - prevY) + "px";
         }
         else if(currentResizer.classList.contains("b")){
-          p.style.height = rect.height + (e.clientY - prevY) + "px"
+          painting.style.height = rect.height + (e.clientY - prevY) + "px";
         }
         else if(currentResizer.classList.contains("l")){
-          p.style.width = rect.width + (prevX - e.clientX) + "px"
-          p.style.left = rect.left + (e.clientX - prevX) + "px"
+          painting.style.width = rect.width + (prevX - e.clientX) + "px";
+          painting.style.left = rect.left + (e.clientX - prevX) + "px";
         }
         else if(currentResizer.classList.contains("r")){
-          p.style.width = rect.width + (e.clientX - prevX) + "px"
+          painting.style.width = rect.width + (e.clientX - prevX) + "px";
         }
-        prevX = e.clientX
-        prevY = e.clientY
-        runQueries(p)
+        prevX = e.clientX;
+        prevY = e.clientY;
+        runQueries(painting);
       }
       function mouseup(){
-        window.removeEventListener("mousemove", mousemove)
-        window.removeEventListener("mouseup", mouseup)
+        window.removeEventListener("mousemove", mousemove);
+        window.removeEventListener("mouseup", mouseup);
       }
     }
   }
