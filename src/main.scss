@@ -1,6 +1,29 @@
 body {
     margin: 0;
     background: #ecebe3;
+    box-sizing: border-box;
+    overflow-y: hidden;
+}
+.scroll-container {
+    scroll-snap-type: x mandatory;
+    display: flex;
+    overflow-x: scroll;
+}
+
+.scroll {
+    min-width: 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+    position: relative;
+}
+.scroll-1 {
+    background-color: red;
+}
+.scroll-2 {
+    background-color: green;
+}
+.scroll-3 {
+    background-color: blue;
 }
 .window{
     width: 475px;
@@ -20,7 +43,7 @@ body {
         background: white;
         &.corner {
             z-index: 11;
-            background: #f6d7af;
+            background: lightgrey;
             &.tl{ cursor: nw-resize; top: -5px; left: -5px; }
             &.tr{ cursor: ne-resize; top: -5px; right: -5px; }
             &.bl{ cursor: sw-resize; bottom: -5px; left: -5px; }
