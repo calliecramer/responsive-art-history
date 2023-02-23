@@ -2,6 +2,16 @@ import "./main.scss";
 
 const galleries = document.querySelectorAll(".gallery")
 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+      });
+  });
+});
+
 function onLoad(painting){
   // position in center of screen
   painting.style.left = painting.offsetLeft + (window.innerWidth/2-painting.offsetWidth/2) + "px"

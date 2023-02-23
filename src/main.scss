@@ -26,20 +26,36 @@ body {
         display: grid;
         grid-template-columns: 1fr 1fr;
         padding: 3em;
+        box-sizing: border-box;
+        height: 100%;
+        .text {
+            display: flex;
+            flex-direction: column;
+        }
         h1 {
             font-size: 4em;
+            line-height: 1.25;
         }
         p {
             font-size: 1em;
+            line-height: 1.5;
+        }
+        a {
+            color: #ffffff;
+            text-decoration: none;
+            border-bottom: 2px solid #4056f4;
         }
         h3 {
-            font-size: 2em;
+            font-size: 1.5em;
+            line-height: 1.25;
         }
         .go {
             a {
                 color: white;
                 text-decoration: none;
             }
+            font-size: 2em;
+            text-align: right;
         }
     }
 }
