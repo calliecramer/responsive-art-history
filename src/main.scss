@@ -50,6 +50,9 @@ body {
         padding: 3em;
         box-sizing: border-box;
         height: 100%;
+        .animation {
+            max-height: 80vh;
+        }
         .text {
             display: flex;
             flex-direction: column;
