@@ -1,8 +1,28 @@
 import "./main.scss";
 
+// open info panel
+function openInfo(){
+
+}
+
+document.querySelectorAll('.open-info').forEach(function (openButton) {
+  openButton.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.getElementById(this.dataset.target).classList.remove('info-hidden');
+  });
+});
+
+document.querySelectorAll('.close-info').forEach(function (closeButton) {
+  closeButton.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.getElementById(this.dataset.target).classList.add('info-hidden');
+  });
+});
+
+// set up galleries
 const galleries = document.querySelectorAll(".gallery")
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
   anchor.addEventListener('click', function (e) {
       e.preventDefault();
 

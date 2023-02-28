@@ -4,16 +4,27 @@
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
+    <div class="mobile-message">
+      <p>This experiment works best on larger screens. Get off your phone!</p>
+    </div>
     <div class="scroll-container">
-      <div class="scroll scroll-1">
+      <div class="scroll scroll-1" id="scroll-1">
         <div class="preview">
-          <div class="animation"></div>
+          <div class="animation">
+            <img src="../SVGs/gallery.svg" alt="gallery image">
+          </div>
           <div class="text">
             <h1>Responsive Art Gallery</h1>
-            <p>Imagining what various paintings would look like at mobile/tablet/desktop width. Inspired by <a href="#" target="_blank">Jen Simmons’</a> responsive Baohaus poster experiments. Built using CSS grid.</p>
+            <p>Imagining what various paintings would look like at mobile/tablet/desktop width. Inspired by <a href="#" target="_blank">Jen Simmons’</a> responsive Bauhaus poster experiments. Built using CSS grid.</p>
             <h3>Resize paintings by dragging their frames.</h3>
             <div class="go">
-              <a href="#scroll-2"><p>Go ></p></a>
+              <a href="#scroll-2">
+                <p>Go</p>
+                  <svg width="30px" height="40px" viewBox="0 0 50 80" xml:space="preserve">
+                    <polyline fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="
+                    0.375,0.375 45.63,38.087 0.375,75.8"/>
+                  </svg>  
+              </a>
             </div>
           </div>
         </div>
@@ -78,6 +89,36 @@
         </div>
         <img class="top-light" src="../SVGs/light.svg"/>
         <img class="bottom-light"src="../SVGs/light.svg"/>
+        <div class="open-info" data-target="klint">
+          <p>About</p>
+        </div>
+        <a class="arrow arrow-left" href="#scroll-1">
+          <svg width="30px" height="40px" viewBox="0 0 50 80" xml:space="preserve">
+            <polyline fill="none" stroke="#87735d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="
+          45.63,75.8 0.375,38.087 45.63,0.375 "/>
+          </svg>  
+        </a>
+        <a class="arrow arrow-right" href="#scroll-3">
+          <svg width="30px" height="40px" viewBox="0 0 50 80" xml:space="preserve">
+            <polyline fill="none" stroke="#87735d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="
+            0.375,0.375 45.63,38.087 0.375,75.8"/>
+          </svg>  
+        </a>
+        <div class="painting-info info-hidden" id="klint">
+          <div class="close-info" data-target="klint">
+            X
+          </div>
+          <div class="info-container">
+            <div>
+              <img src="../SVGs/klint-original.jpg" alt="Hilma af Klint - The Ten Largest No. 2 - Childhood"/>
+            </div>
+            <div>
+              <h2>Hilma af Klint</h2>
+              <p><strong>The Ten Largest, No. 2: Childhood</strong> 1907<br>
+                Tempera on paper mounted on canvas</p>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="scroll scroll-3 gallery" id="scroll-3">
         <div class="painting paint2">
@@ -98,7 +139,30 @@
         </div>
         <img class="top-light" src="../SVGs/light.svg"/>
         <img class="bottom-light"src="../SVGs/light.svg"/>
-
+        <div class="open-info" data-target="other">
+          <p>About</p>
+        </div>
+        <a class="arrow arrow-left" href="#scroll-2">
+          <svg width="30px" height="40px" viewBox="0 0 50 80" xml:space="preserve">
+            <polyline fill="none" stroke="#87735d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="
+          45.63,75.8 0.375,38.087 45.63,0.375 "/>
+          </svg>  
+        </a>
+        <div class="painting-info info-hidden" id="other">
+          <div class="close-info" data-target="other">
+            X
+          </div>
+          <div class="info-container">
+            <div>
+              <img src="../SVGs/klint-original.jpg" alt="Hilma af Klint - The Ten Largest No. 2 - Childhood"/>
+            </div>
+            <div>
+              <h2>Hilma af Klint</h2>
+              <p><strong>The Ten Largest, No. 2: Childhood</strong> 1907<br>
+                Tempera on paper mounted on canvas</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <script type="text/javascript" src="main.js"></script>
