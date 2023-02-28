@@ -224,9 +224,34 @@ body {
         position: absolute;
         right: 2em;
         top: 2em;
+        svg {
+            overflow: visible;
+            rotate: 90deg;
+        }
+        &:hover svg{
+            animation: .5s ease-in-out;
+            opacity: .6;
+        }
     }
     &.info-hidden {
         bottom: -500px;   
+    }
+}
+
+@keyframes pulse {
+    from {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  
+    50% {
+      -webkit-transform: scale3d(1.2, 1.2, 1.2);
+      transform: scale3d(1.2, 1.2, 1.2);
+    }
+  
+    to {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
     }
 }
 
