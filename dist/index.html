@@ -1,5 +1,6 @@
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://unpkg.com/lodash@4.17.20"></script>
     <link rel="stylesheet" href="main.css">
   </head>
@@ -16,7 +17,7 @@
           <div class="text">
             <h1>Responsive Art Gallery</h1>
             <p>Imagining what various paintings would look like at mobile/tablet/desktop width. Inspired by <a href="#" target="_blank">Jen Simmons’</a> responsive Bauhaus poster experiments. Built using CSS grid.</p>
-            <h3>Resize paintings by dragging their frames.</h3>
+            <p>Resize paintings by dragging their frames.</p>
             <div class="go">
               <a href="#scroll-2">
                 <p>Go</p>
@@ -90,20 +91,23 @@
         <img class="top-light" src="../SVGs/light.svg"/>
         <img class="bottom-light"src="../SVGs/light.svg"/>
         <div class="open-info" data-target="klint">
-          <p>About</p>
+          <h3>About</h3>
         </div>
+        
         <a class="arrow arrow-left" href="#scroll-1">
           <svg width="30px" height="40px" viewBox="0 0 50 80" xml:space="preserve">
             <polyline fill="none" stroke="#87735d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="
           45.63,75.8 0.375,38.087 45.63,0.375 "/>
           </svg>  
         </a>
+        <!--
         <a class="arrow arrow-right" href="#scroll-3">
           <svg width="30px" height="40px" viewBox="0 0 50 80" xml:space="preserve">
             <polyline fill="none" stroke="#87735d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="
             0.375,0.375 45.63,38.087 0.375,75.8"/>
           </svg>  
         </a>
+        -->
         <div class="painting-info info-hidden" id="klint">
           <div class="close-info" data-target="klint">
             <svg width="40px" height="40px" viewBox="0 0 50 80" xml:space="preserve">
@@ -125,6 +129,7 @@
           </div>
         </div>
       </div>
+      <!--
       <div class="scroll scroll-3 gallery" id="scroll-3">
         <div class="painting paint2">
           <div class="resizer corner tl"></div>
@@ -174,6 +179,7 @@
           </div>
         </div>
       </div>
+      -->
     </div>
     <script type="text/javascript" src="main.js"></script>
   </body>
