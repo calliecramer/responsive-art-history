@@ -1,20 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Roboto:ital,wght@0,100;0,400;0,500;1,100;1,400;1,500&display=swap');
 body {
     margin: 0;
     box-sizing: border-box;
     overflow-y: hidden;
-    background: #ecebe3;
+    background: #FCF9E7;
     scroll-behavior: smooth;
-    font-family: 'Roboto', sans-serif;
+    font-family: swear-display, serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
 h1 {
-    font-family: 'Italiana', serif;
-    margin-bottom: 0.5em;
+    font-family: "swear-display-cilati", sans-serif;
+    font-weight: 700;
+    font-style: normal; 
+    margin-bottom: 0.25em;
 }
 
 h3 {
-    font-family: 'Italiana', serif;
+    font-family: "swear-display-cilati", sans-serif;
+    font-weight: 700;
+    font-style: normal; 
 }
 
 .mobile-message{
@@ -33,7 +38,7 @@ h3 {
     }
     @media (min-width: 775px) {
         display: none;
-      }
+    }
 }
 
 .scroll-container {
@@ -49,91 +54,104 @@ h3 {
     overflow: hidden;
 }
 .scroll-1 {
-    background-color: black;
-    color: white;
+    color: #183A1D;
     .preview {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: auto minmax(0, 1fr);
         gap: 2em;
-        padding: 3em;
+        padding: 1em 3em;
         box-sizing: border-box;
         height: 100%;
+        max-width: 1200px;
         .animation img{
-            max-height: 80vh;
+            max-height: 95vh;
+            max-width: 100%;
         }
         .text {
             display: flex;
             flex-direction: column;
         }
         h1 {
-            font-size: 4em;
-            line-height: 1.25;
+            font-size: 7em;
+            line-height: 1em;
+            span {
+                text-shadow: 0 0 1px #183A1D, 0 0 1px #183A1D, 0 0 1px #183A1D, 0 0 1px #183A1D;
+                color: #FCF9E7;
+            }
         }
         p {
-            font-size: 1em;
+            font-size: 1.5em;
             line-height: 1.5;
         }
-        a {
-            color: #ffffff;
-            text-decoration: none;
-            border-bottom: 2px solid #4056f4;
+        @media (max-width: 1100px) {
+            h1 {
+                font-size: 5em;
+            }
+            p {
+                font-size: 1em;
+            }
         }
-        h3 {
-            font-size: 1.5em;
-            line-height: 1.25;
+        @media (max-width: 1000px) {
+            h1 {
+                font-size: 4em;
+            }
+            grid-template-columns: 1fr 1fr;
+
+        }
+        a {
+            color: #183A1D;
+            text-decoration: none;
+            border-bottom: 2px solid #EE9E4B;
+            &:hover {
+                color: #EE9E4B;
+            }
         }
         .go {
-            width: 100px;
+            font-size: 1.5em;
             position: absolute;
             bottom: 0;
             right: 1em;
+            font-family: "swear-display-cilati", sans-serif;
+            font-weight: 600;
+            font-style: normal; 
             a { 
                 font-size: 2em;
-                color: white;
+                color: #183A1D;
                 border-bottom: none;
                 display: flex;
                 align-items: center;
                 gap: 0.5em;
+                p {
+                    margin: 0;
+                }
+                img {
+                    max-width: 100px;
+                }
                 &:hover {
-                    polyline {
-                        stroke: #4056f4;
-                        transition-duration: .2s;
-                    }
+                    color: #EE9E4B;
                 }
             }
-        }
-    }
-}
-
-.top-light {
-    position: absolute;
-    opacity: 30%;
-    user-select: none;
-}
-
-.bottom-light {
-    position: absolute;
-    user-select: none;
-    z-index: -1;
-}
-
-.arrow {
-    position: absolute;
-    top: 45%;
-    padding: 0 1em;
-    &.arrow-left {
-        left: 0;
-    }
-    &.arrow-right {
-        right: 0;
-    }
-    svg {
-        overflow: visible;
-        &:hover {
-            polyline{
-                stroke: #56493c;
+            @media (max-width: 1000px) {
+                position: inherit;
             }
         }
+    }
+}
+
+.hand {
+    position: absolute;
+    position: absolute;
+    bottom: 1em;
+    line-height: 1.5;
+    font-size: 1.5em;
+    img {
+        max-width: 100px;
+    }
+    &.hand-left {
+        left: 1em;
+    }
+    &.hand-right {
+        right: 1em;
     }
 }
 
@@ -141,8 +159,7 @@ h3 {
     min-width: 200px;
     min-height: 200px;
     position: absolute;
-    box-shadow: 0px 16px 17px 1px rgba(189,161,127,1);
-    border: 2px solid #f6d7af; 
+    border: 2px solid #EE9E4B; 
     box-sizing: border-box;
     overflow: hidden;
     .resizer{
@@ -150,10 +167,10 @@ h3 {
         z-index: 10;
         width: 14px;
         height: 14px;
-        background: white;
+        background: #FCF9E7;
         &.corner {
             z-index: 11;
-            background: lightgrey;
+            background: #EE9E4B;
             &.tl{ cursor: nw-resize; top: -5px; left: -5px; }
             &.tr{ cursor: ne-resize; top: -5px; right: -5px; }
             &.bl{ cursor: sw-resize; bottom: -5px; left: -5px; }
@@ -196,56 +213,81 @@ h3 {
     }
 }
 
-.open-info {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin: 1em;
-    background: white;
-    padding: 0.5em 2em;
-    z-index: 30;
-    cursor: pointer;
-    box-shadow: 0px 2px 6px 0px rgba(168,151,130,0.32);
-    border-radius: 3px;
-    &:hover {
-        background: whitesmoke;
-    }
-}
-
 .painting-info {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.9);
-    z-index: 30;
-    transition: bottom .75s ease-in-out;
-    .info-container {
-        display: flex;
-        color: white;
-        gap: 2em;
-        max-width: 800px;
-        margin: 3em auto 3em auto;
-        img {
-            max-width: 300px;
+    .open-info {
+        position: absolute;
+        left: 0.5em;
+        bottom: 0.5em;
+        background: #183A1D;
+        color: #FCF9E7;
+        padding: 0 1.5em 0 2em;
+        z-index: 30;
+        cursor: pointer;
+        border-radius: 0 0 0 50px;
+        &:hover {
+            h3 {
+                color: #EE9E4B;
+            }
+        }
+    }
+    h3 {
+        font-size: 2em;
+        line-height: 0;
+        @media (max-width: 1000px){
+            font-size: 1.5em;
         }
     }
     .close-info {
         color: white;
         cursor: pointer;
         position: absolute;
-        right: 2em;
-        top: 2em;
-        svg {
-            overflow: visible;
-            rotate: 90deg;
+        right: 1.5em;
+        top: 1em;
+        &:hover {
+            h3 {
+                color: #EE9E4B;
+            }
         }
-        &:hover svg{
-            animation: .5s ease-in-out;
-            opacity: .6;
+    }
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 98%;
+    height: 98%;
+    background: #183A1D;
+    border-radius: 0 0 0 50px;
+    z-index: 30;
+    transition: all .75s ease-in-out;
+    .info-container {
+        display: flex;
+        color: white;
+        gap: 4em;
+        margin: 6em 8em;
+        img {
+            max-height: 70vh;
+        }
+        h2 {
+            font-family: "swear-display-cilati", sans-serif;
+            font-weight: 700;
+            font-style: normal; 
+            font-size: 4em;
+        }
+        p {
+            font-size: 1.5em;
+            line-height: 1.5;
+        }
+        @media (max-width: 1100px) {
+            h2 {
+                font-size: 3em;
+            }
+            p {
+                font-size: 1em;
+            }
         }
     }
     &.info-hidden {
-        bottom: -500px;   
+        top: -89vh;
+        right: -85vw;  
     }
 }
 
@@ -272,7 +314,7 @@ h3 {
     .body {
         background: #809eb6;
         .cover {
-            background-image: url("../SVGs/paint.png");
+            background-image: url("../img/paint.png");
         }
         .klint-grid {
             display: grid;

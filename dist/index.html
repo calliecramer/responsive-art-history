@@ -1,6 +1,11 @@
 <html>
   <head>
+    <title>Responsive Art History</title>
+    <meta property="og:title" content="Responsive Art History" />
+    <meta name="description" content="A CSS Grid Experiment" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="https://use.typekit.net/xdk3uvx.css">
     <script src="https://unpkg.com/lodash@4.17.20"></script>
     <link rel="stylesheet" href="main.css">
   </head>
@@ -12,19 +17,16 @@
       <div class="scroll scroll-1" id="scroll-1">
         <div class="preview">
           <div class="animation">
-            <img src="../SVGs/gallery.svg" alt="gallery image">
+            <img src="../img/frame.png" alt="frame image">
           </div>
           <div class="text">
-            <h1>Responsive Art Gallery</h1>
+            <h1><span>Responsive</span><br>Art Gallery</h1>
             <p>Imagining what various paintings would look like at mobile/tablet/desktop width. Inspired by <a href="#" target="_blank">Jen Simmons’</a> responsive Bauhaus poster experiments. Built using CSS grid.</p>
-            <p>Resize paintings by dragging their frames.</p>
+            <p><strong>Resize paintings by dragging their frames.</strong></p>
             <div class="go">
               <a href="#scroll-2">
                 <p>Go</p>
-                  <svg width="30px" height="40px" viewBox="0 0 50 80" xml:space="preserve">
-                    <polyline fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="
-                    0.375,0.375 45.63,38.087 0.375,75.8"/>
-                  </svg>  
+                <img src="../img/hand.png" alt="pointing hand">
               </a>
             </div>
           </div>
@@ -45,81 +47,66 @@
               <div class="cover">
               </div>
               <div class="orange-orb-base">
-                  <img src="../SVGs/orange-orb-base.svg"/>
+                  <img src="../img/klint/orange-orb-base.svg"/>
                 </div>
                 <div class="blue-orb">
-                  <img src="../SVGs/blue-orb.svg"/>
+                  <img src="../img/klint/blue-orb.svg"/>
                 </div>
                 <div class="orange-orb-overlay">
-                  <img src="../SVGs/orange-orb-overlay.svg"/>
+                  <img src="../img/klint/orange-orb-overlay.svg"/>
                 </div>
               <div class="klint-grid">
                 <div class="blue-yellow">
-                  <img src="../SVGS/blue-yellow.svg" />
+                  <img src="../img/klint/blue-yellow.svg" />
                 </div>
                 <div class="orange-flower">
-                  <img src="../SVGs/orange-flower.svg" />
+                  <img src="../img/klint/orange-flower.svg" />
                 </div>
                 <div class="spiral-flower">
-                  <img src="../SVGs/spiral-flower.svg" />
+                  <img src="../img/klint/spiral-flower.svg" />
                 </div>
                 <div class="yellow-orb">
-                  <img src="../SVGs/yellow-orb.svg" />
+                  <img src="../img/klint/yellow-orb.svg" />
                 </div>
                 <div class="pink-orb">
-                  <img src="../SVGs/pink-orb.svg" />
+                  <img src="../img/klint/pink-orb.svg" />
                 </div>
                 <div class="main-pink-flower">
-                  <img src="../SVGs/main-pink-flower.svg" />
+                  <img src="../img/klint/main-pink-flower.svg" />
                 </div>
                 <div class="doodle">
-                  <img src="../SVGs/doodle.svg" />
+                  <img src="../img/klint/doodle.svg" />
                 </div>
                 <div class="yellow-flower">
-                  <img src="../SVGs/yellow-flower.svg" />
+                  <img src="../img/klint/yellow-flower.svg" />
                 </div>
                 <div class="green-white">
-                  <img src="../SVGs/green-white.svg" />
+                  <img src="../img/klint/green-white.svg" />
                 </div>
                 <div class="hourglass">
-                  <img src="../SVGs/hourglass.svg" />
+                  <img src="../img/klint/hourglass.svg" />
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <img class="top-light" src="../SVGs/light.svg"/>
-        <img class="bottom-light"src="../SVGs/light.svg"/>
-        <div class="open-info" data-target="klint">
-          <h3>About</h3>
-        </div>
         
-        <a class="arrow arrow-left" href="#scroll-1">
-          <svg width="30px" height="40px" viewBox="0 0 50 80" xml:space="preserve">
-            <polyline fill="none" stroke="#87735d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="
-          45.63,75.8 0.375,38.087 45.63,0.375 "/>
-          </svg>  
+        <a class="hand hand-left" href="#scroll-1">
+          <img src="../img/hand-left.png" alt="pointing hand">
         </a>
-        <!--
-        <a class="arrow arrow-right" href="#scroll-3">
-          <svg width="30px" height="40px" viewBox="0 0 50 80" xml:space="preserve">
-            <polyline fill="none" stroke="#87735d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="
-            0.375,0.375 45.63,38.087 0.375,75.8"/>
-          </svg>  
+        <a class="hand hand-right" href="#scroll-3">
+          <img src="../img/hand.png" alt="pointing hand"> 
         </a>
-        -->
         <div class="painting-info info-hidden" id="klint">
+          <div class="open-info" data-target="klint">
+            <h3>About</h3>
+          </div>
           <div class="close-info" data-target="klint">
-            <svg width="40px" height="40px" viewBox="0 0 50 80" xml:space="preserve">
-              <polyline fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="
-              0,0  50,50"/>
-              <polyline fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="
-              0,50 50,0"/>
-            </svg> 
+            <h3>Close</h3>
           </div>
           <div class="info-container">
             <div>
-              <img src="../SVGs/klint-original.jpg" alt="Hilma af Klint - The Ten Largest No. 2 - Childhood"/>
+              <img src="../img/klint/klint-original.jpg" alt="Hilma af Klint - The Ten Largest No. 2 - Childhood"/>
             </div>
             <div>
               <h2>Hilma af Klint</h2>
@@ -129,7 +116,6 @@
           </div>
         </div>
       </div>
-      <!--
       <div class="scroll scroll-3 gallery" id="scroll-3">
         <div class="painting paint2">
           <div class="resizer corner tl"></div>
@@ -147,25 +133,15 @@
             </div>
           </div>
         </div>
-        <img class="top-light" src="../SVGs/light.svg"/>
-        <img class="bottom-light"src="../SVGs/light.svg"/>
-        <div class="open-info" data-target="other">
-          <p>About</p>
-        </div>
-        <a class="arrow arrow-left" href="#scroll-2">
-          <svg width="30px" height="40px" viewBox="0 0 50 80" xml:space="preserve">
-            <polyline fill="none" stroke="#87735d" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="
-          45.63,75.8 0.375,38.087 45.63,0.375 "/>
-          </svg>  
+        <a class="hand hand-left" href="#scroll-2">
+          <img src="../img/hand-left.png" alt="pointing hand">
         </a>
         <div class="painting-info info-hidden" id="other">
+          <div class="open-info" data-target="other">
+            <h3>About</h3>
+          </div>
           <div class="close-info" data-target="other">
-            <svg width="40px" height="40px" viewBox="0 0 50 80" xml:space="preserve">
-              <polyline fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="
-              0,0  50,50"/>
-              <polyline fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="
-              0,50 50,0"/>
-            </svg> 
+            <h3>Close</h3>
           </div>
           <div class="info-container">
             <div>
@@ -179,7 +155,6 @@
           </div>
         </div>
       </div>
-      -->
     </div>
     <script type="text/javascript" src="main.js"></script>
   </body>
