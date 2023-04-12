@@ -17,8 +17,8 @@ h1 {
 }
 
 h3 {
-    font-family: "swear-display-cilati", sans-serif;
-    font-weight: 700;
+    font-family: "swear-display", sans-serif;
+    font-weight: 500;
     font-style: normal; 
 }
 
@@ -459,5 +459,226 @@ h3 {
     .blue-orb img {
         position: absolute; bottom: 0; right: 0; max-height: 250px;
         user-select: none;
+    }
+}
+
+.rauschenberg {
+    width: 475px;
+    height: 665px;
+    .body {
+        background: #F4F0EC;
+        .rauschenberg-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            height: 100%;
+            user-select: none;
+            img {
+                max-height: 100%;
+                max-width: 100%;
+            }
+            &> div {
+                mix-blend-mode: multiply;
+            }
+        }
+    }
+    .fabric {
+        grid-column: 5 / 11;
+        grid-row: 3 / 5;
+    }
+    .beach {
+        grid-column: 3 / 7;
+        grid-row: 5 / 8;
+    }
+    .balcony {
+        grid-column: 7 / 12;
+        grid-row: 5 / 9;
+    }
+    .red {
+        grid-column: 2 / 13;
+        grid-row: 8 / 13;
+    }
+    .plant {
+        grid-column: 3 / 8;
+        grid-row: 10 / 13;
+    }
+    .fair {
+        grid-column: 7 / 13;
+        grid-row: 10 / 13;
+    }
+    .green-br {
+        grid-column: 5 / 13;
+        grid-row: 13 / 16;
+    }
+    .purple-br {
+        grid-column: 3 / 11;
+        grid-row: 16 / 19;
+    }
+    .orange-br {
+        grid-column: 6 / 8;
+        grid-row: 19 / 20;
+    }
+    .stripes {
+        grid-column: 3 / 12;
+        grid-row: 6 / 13;
+    }
+    &.medium {
+        .rauschenberg-grid {
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        }
+
+        .fabric {
+            grid-column: 7 / 15;
+            grid-row: 2 / 4;
+        }
+        .beach {
+            grid-column: 2 / 7;
+            grid-row: 4 / 8;
+        }
+        .balcony {
+            grid-column: 7 / 14;
+            grid-row: 4 / 8;
+        }
+        .red {
+            grid-column: 13 / 18;
+            grid-row: 4 / 11;
+            background-image: url('../img/rauschenberg/red-v.png');
+            background-size: contain;
+            img {
+                display: none;
+            }
+        }
+        .plant {
+            grid-column: 13 / 18;
+            grid-row: 8 / 11;
+        }
+        .fair {
+            grid-column: 13 / 19;
+            grid-row: 4 / 9;
+        }
+        .green-br {
+            grid-column: 6 / 13;
+            grid-row: 7 / 10;
+        }
+        .purple-br {
+            grid-column: 6 / 13;
+            grid-row: 9 / 12;
+        }
+        .orange-br {
+            grid-column: 7 / 9;
+            grid-row: 11 / 14;
+        }
+        .stripes {
+            grid-column: 3 / 14;
+            grid-row: 4 / 11;
+        }
+    }
+    &.medium {
+        .rauschenberg-grid {
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        }
+
+        .fabric {
+            grid-column: 7 / 15;
+            grid-row: 2 / 4;
+        }
+        .beach {
+            grid-column: 2 / 7;
+            grid-row: 4 / 8;
+        }
+        .balcony {
+            grid-column: 7 / 14;
+            grid-row: 4 / 8;
+        }
+        .red {
+            grid-column: 13 / 18;
+            grid-row: 4 / 11;
+            background: url('../img/rauschenberg/red-v.png') no-repeat;
+            background-size: contain;
+            img {
+                display: none;
+            }
+        }
+        .plant {
+            grid-column: 13 / 18;
+            grid-row: 8 / 11;
+        }
+        .fair {
+            grid-column: 13 / 19;
+            grid-row: 4 / 9;
+        }
+        .green-br {
+            grid-column: 6 / 13;
+            grid-row: 7 / 10;
+        }
+        .purple-br {
+            grid-column: 6 / 13;
+            grid-row: 9 / 12;
+        }
+        .orange-br {
+            grid-column: 7 / 9;
+            grid-row: 11 / 14;
+        }
+        .stripes {
+            grid-column: 3 / 14;
+            grid-row: 4 / 11;
+        }
+    }
+    &.large {
+        .rauschenberg-grid {
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        }
+
+        .fabric {
+            grid-column: 7 / 14;
+            grid-row: 2 / 5;
+        }
+        .beach {
+            grid-column: 3 / 6;
+            grid-row: 4 / 8;
+        }
+        .balcony {
+            grid-column: 5 / 11;
+            grid-row: 4 / 10;
+        }
+        .red {
+            grid-column: 15 / 18;
+            grid-row: 3 / 11;
+            background: url('../img/rauschenberg/red-v.png') no-repeat;
+            background-size: contain;
+            img {
+                display: none;
+            }
+        }
+        .plant {
+            grid-column: 15 / 18;
+            grid-row: 7 / 10;
+        }
+        .fair {
+            grid-column: 11 / 16;
+            grid-row: 4 / 9;
+        }
+        .green-br {
+            grid-column: 11 / 15;
+            grid-row: 6 / 10;
+        }
+        .purple-br {
+            grid-column: 11 / 15;
+            grid-row: 8 / 11;
+        }
+        .orange-br {
+            grid-column: 3 / 5;
+            grid-row: 9 / 11;
+        }
+        .stripes {
+            grid-column: 3 / 14;
+            grid-row: 4 / 9;
+            img {
+                width: 100%;
+            }
+        }
     }
 }
